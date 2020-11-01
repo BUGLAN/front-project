@@ -1,0 +1,31 @@
+<html>
+<title>前端工具箱</title>
+<link rel="stylesheet" href="ws.css">
+
+<body>
+    <div class="root">
+        <h1>websocket在线测试工具</h1>
+
+        <div class="wrapper">
+
+            <div class="wrapper-left">
+                <h3>服务器配置 状态: 尚未创建</h3>
+                <hr>
+                <!-- <h3>发包设置</h3> -->
+                <input type="text" id="addr" placeholder="请输入服务端地址"> <button id="btn" class="pure-button">开始连接</button>
+                <br>
+                <textarea name="" id="area" cols="30" rows="5"></textarea> <button id="send" class="pure-button">发送到服务端</button>
+            </div>
+
+
+            <div class="wrapper-right">
+                <div id="msg-list">
+                    <h2>消息</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="ws.js"></script>
+
+</html>
