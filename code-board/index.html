@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Board</title>
+</head>
+
+<body>
+    <h1>code board</h1>
+
+    <div class="board"></div>
+    <div class="board"></div>
+    <div class="board"></div>
+    <div class="board"></div>
+
+    <div id="content"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    marked.setOptions({
+        highlight: function(code, lang, callback) {
+            require('pygmentize-bundled')({
+                lang: lang,
+                format: 'html'
+            }, code, function(err, result) {
+                callback(err, result.toString());
+            });
+        }
+    });
+    var content = ` * hello world `
+    document.getElementById('content').innerHTML = marked(content);
+</script>
+
+</html>
